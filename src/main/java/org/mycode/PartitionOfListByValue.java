@@ -4,8 +4,6 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 public class PartitionOfListByValue {
-    private final static String messageGreeting = "--- Partition of linked list to less and greater/equal than value ---";
-    private final static String messageValue = "Enter key value (integer): ";
     public LinkedList<Integer> partitionOfLinkedList(LinkedList<Integer> list, int value){
         if(list == null || list.size()==0) return null;
         ListIterator<Integer> listIter = list.listIterator();
@@ -26,13 +24,5 @@ public class PartitionOfListByValue {
             }
         }
         return list;
-    }
-    public void getWork(){
-        UsersInput input = new UsersInput();
-        LinkedList<Integer> list = (LinkedList<Integer>) input.inputList(1, messageGreeting);
-        int value = input.inputValue(messageValue, true);
-        input.showOldList(list);
-        list = partitionOfLinkedList(list, value);
-        input.showNewList(list);
     }
 }
